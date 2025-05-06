@@ -24,8 +24,8 @@ export default function RootLayout({
               <div className="flex justify-between h-16">
                 <div className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <span className="text-2xl font-bold text-[var(--accent)]">JKKN</span>
-                    <span className="ml-2 text-gray-600">Counselling</span>
+                    <span className="text-2xl font-bold text-[var(--accent)]">Mentor Mentee</span>
+                    <span className="ml-2 text-gray-600"></span>
                   </Link>
                 </div>
                 
