@@ -2,49 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #2C3E50;
+  --secondary: #34495E;
+  --accent: #8E44AD;
+  --background: #F8FAFC;
+  --text: #2D3748;
+}
+
 @layer base {
   html {
     @apply antialiased;
   }
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-[var(--background)] text-[var(--text)] min-h-screen;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 shadow-sm hover:shadow-md;
+    @apply px-6 py-3 bg-[var(--accent)] text-white rounded-lg 
+           hover:bg-opacity-90 transition-all duration-300 
+           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
-  
-  .nav-link {
-    @apply inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200;
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-[var(--accent)] rounded-lg 
+           border-2 border-[var(--accent)] hover:bg-[var(--accent)] 
+           hover:text-white transition-all duration-300 
+           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
-  
-  .nav-link-active {
-    @apply border-primary-500 text-gray-900;
-  }
-  
-  .nav-link-inactive {
-    @apply border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700;
-  }
-  
+
   .card {
-    @apply bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-200;
+    @apply bg-white rounded-xl shadow-lg p-6 
+           hover:shadow-xl transition-all duration-300 
+           border border-gray-100;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 
+           focus:border-[var(--accent)] focus:ring-2 
+           focus:ring-[var(--accent)] focus:ring-opacity-50 
+           transition-all duration-300 outline-none;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-gray-600 hover:text-[var(--accent)] 
+           transition-colors duration-300 relative 
+           after:absolute after:bottom-0 after:left-0 
+           after:w-0 after:h-0.5 after:bg-[var(--accent)] 
+           hover:after:w-full after:transition-all after:duration-300;
+  }
+
+  .nav-link.active {
+    @apply text-[var(--accent)] after:w-full;
   }
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7D3C98;
 } 
