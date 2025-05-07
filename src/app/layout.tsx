@@ -84,7 +84,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
-                <p>&copy; {new Date().getFullYear()} JKKN Counselling Portal. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} JKKN Mentor Mentee Portal. All rights reserved.</p>
               </div>
             </div>
           </footer>
