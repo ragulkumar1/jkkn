@@ -5,7 +5,7 @@ import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'JKKN Counselling Portal',
+  title: 'JKKN Mentor Mentee',
   description: 'Professional counselling and mentorship platform',
 }
 
@@ -84,7 +84,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
-                <p>&copy; {new Date().getFullYear()} JKKN Mentor Mentee Portal. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} JKKN Mentor Mentee . All rights reserved.</p>
               </div>
             </div>
           </footer>
