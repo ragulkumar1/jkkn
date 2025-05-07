@@ -78,8 +78,8 @@ export default function RootLayout({
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact</h3>
                   <p className="text-gray-600">
-                    Email: support@jkkn.ac.in<br />
-                    Phone: +91 XXX XXX XXXX
+                    Email: ragul@jkkn.ac.in<br />
+                    Phone: +91 9994156390
                   </p>
                 </div>
               </div>
